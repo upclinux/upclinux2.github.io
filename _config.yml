@@ -7,7 +7,10 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://upclinux.github.io" # the base hostname & protocol for your site
 #twitter_username: jekyllrb
 github_username: upclinux
-qqgroup_id: 279310694
+qqqun_name: "QQ 群 (279310694)"
+qqqun_idkey: e47c6b546d3373c09f7eaa8d4173728a513975ed2d0ec20106e83cfb11a3bf08
+#weibo_username: upclinux
+#weibo_userid: 0000
 
 # Build settings
 markdown: kramdown
