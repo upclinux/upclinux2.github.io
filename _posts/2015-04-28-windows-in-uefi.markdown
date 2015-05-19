@@ -6,7 +6,8 @@ date:  2015-04-28 20:23:38
 categories: 系统维护
 ---
 
-{:toc:}
+* content
+{:toc}
 
 *以下内容很长……*
 

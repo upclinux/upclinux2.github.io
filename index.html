@@ -1,23 +1,69 @@
 ---
 layout: default
 ---
+<div class="row">
+  <div class="col-md-12">
+    <div class="page-header">
+      <h1>{{ site.title }}</h1>
+      <p class="text-muted">{{ site.description }}</p>
+    </div>    
+  </div>
 
-<div class="home">
+  <div class="col-md-9" role="main">
+    <div>
+      {% for post in paginator.posts %}
+      <div class="post-preview">
+        <div class="post-header">
+          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
+        </div>
+        <div>{{ post.excerpt }}</div>
+        <div class="text-right"><a href="{{ post.url }}" target="_blank">继续阅读全文</a></div>
+      </div>
+      {% endfor %}
+    </div>
 
-  <h1 class="page-heading">Posts</h1>
+    <nav>
+      <ul class="pager">
+        {% if paginator.previous_page %}
+        <li class="previous">
+          <a href="{{ paginator.previous_page_path }}" title="previous page">
+            <span aria-hidden="true">&larr;</span> 
+            <small>更新的文章</small>
+          </a>
+        </li>
+        {% endif %}
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+        {% if paginator.next_page %}
+        <li class="next">
+          <a href="{{ paginator.next_page_path }}">
+            <small>更早的文章</small> 
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="col-sm-3">
+    <h4 class="page-header">
+      分类
+    </h4>
+    
+    <div class="categories-list">
+      <a class="categories-list-item" href="{{ "/categorites/" | prepend: site.baseurl }}?c=All">
+        全部文章
+        <span class="badge">{{site.categories | size}}</span>
+      </a>
+      {% for category in site.categories %}
+        <a class="categories-list-item" href="{{ "/categorites/" | prepend: site.baseurl }}?c={{ category | first }}">
+          {{ category | first }}
+          <span class="badge">{{ category | last | size }}</span>
+        </a>
+      {% endfor %}
+    </div>
+    
+    {% include links.html %}
+  </div>
 </div>
