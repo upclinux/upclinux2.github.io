@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "欢迎使用 Jekyll!"
+title:  "欢迎使用 Jekyll! ——新博客建立"
 author: vjudge1
 date:   2015-05-18 14:23:38
 categories: Jekyll
