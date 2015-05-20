@@ -4,6 +4,7 @@ title: "UEFI 环境下的 Windows"
 author: vjudge1
 date:  2015-04-28 20:23:38
 categories: 系统维护
+tags: Windows UEFI
 ---
 
 * content

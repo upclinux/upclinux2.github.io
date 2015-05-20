@@ -3,8 +3,11 @@ layout: post
 title:  "欢迎使用 Jekyll! ——新博客建立"
 author: vjudge1
 date:   2015-05-18 14:23:38
-categories: Jekyll
+categories: 社团工作
+tags: GitHub
 ---
+终于找到了一个既靠谱又方便【码农】使用的博客。
+
 此博客是个纯静态博客。空间由 [GitHub Pages](https://pages.github.com) 提供，而所有代码均保存在 [GitHub 项目](https://github.com/upclinux/upclinux.github.io)中。
 
 博客代码是完全公开的，可以按照自己意愿来进行修改。如果有什么好的内容想分享给大家，可以 fork & pull，甚至向会长申请成为 Owner。
@@ -15,11 +18,11 @@ categories: Jekyll
 
 
 
-*以下不仅仅是一篇翻译。*
-
-*Jekyll 不支持 Windows。由于文件名和文件内容的汉字编码的问题（Windows 默认使用 GB2312 编码，而 Linux/Mac 均使用 UTF-8 编码），请尽量避免在 Windows 下编辑和管理博客。*
+*Jekyll 官方不支持 Windows。由于文件名和文件内容的汉字编码的问题（Windows 默认使用 GB2312 编码，而 Linux/Mac 均使用 UTF-8 编码），请尽量避免在 Windows 下编辑和管理博客。*
 
     -_-||
+
+*以下是经过改动的翻译。*
 
 你可以在项目的`_posts`目录里发现这篇文章。直接编辑然后重新“编译”来查看更改。你可以用很多种方法来“编译”，但是人们用得最多的还是输入 `jekyll serve`，因为这样正好可以启动一个小型 Web 服务器，然后你就可以直接从浏览器来查看了。
 
