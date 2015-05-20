@@ -418,8 +418,9 @@
 }
 
 #content .affix {
+    position: fixed;
     top: 20px;
-    bottom: 0;
+    /* bottom: 0; */
 }
 
 #content .affix-bottom {
