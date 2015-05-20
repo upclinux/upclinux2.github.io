@@ -17,11 +17,18 @@ layout: default
           <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
           <p class="post-meta">
             {{ post.date | date: "%Y 年 %-m 月 %-d 日" }}
-            {% if post.author %} • {{ post.author }}{% endif %}
-            {% if post.meta %} • {{ post.meta }}{% endif %}
-            {% if post.categories %} • 
+            {% if post.author %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span> {{ post.author }}{% endif %}
+            {% if post.meta %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-bookmark"></span> {{ post.meta }}{% endif %}
+            {% if post.categories %}
+              &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-th-list"></span>
               {% for c in post.categories %}
-                <a href="{{ "/categorites/" | prepend: site.baseurl }}?c={{ c }}">{{ c }}</a>
+                <a href="{{ "/categorites/?c=" | prepend: site.baseurl | append: c }}">{{ c }}</a>
+              {% endfor %}
+            {% endif %}
+            {% if post.tags[0] %}
+              &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-tags"></span>&nbsp;
+              {% for c in post.tags %}
+                <a href="{{ "/tags/#tag-" | prepend: site.baseurl | append: c }}">{{ c }}</a>
               {% endfor %}
             {% endif %}
           </p>
@@ -56,23 +63,6 @@ layout: default
   </div>
   
   <div class="col-sm-3">
-    <h4 class="page-header">
-      分类
-    </h4>
-    
-    <div class="categories-list">
-      <a class="categories-list-item" href="{{ "/categorites/" | prepend: site.baseurl }}?c=All">
-        全部文章
-        <span class="badge">{{site.categories | size}}</span>
-      </a>
-      {% for category in site.categories %}
-        <a class="categories-list-item" href="{{ "/categorites/" | prepend: site.baseurl }}?c={{ category | first }}">
-          {{ category | first }}
-          <span class="badge">{{ category | last | size }}</span>
-        </a>
-      {% endfor %}
-    </div>
-    
-    {% include links.html %}
+    {% include sidebar.html %}
   </div>
 </div>

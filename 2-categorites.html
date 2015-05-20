@@ -36,20 +36,7 @@ permalink: /categorites/
     
   </div>
   
-  <div class="col-sm-3">
-    <h4 class="page-header">
-      分类
-    </h4>
-    
-    <div class="categories-list">
-      <a class="categories-list-item" href="javascript:;" data-cate="All">全部文章
-        <span class="badge">{{site.categories | size}}</span></a>
-      {% for category in site.categories %}
-        <a class="categories-list-item" href="javascript:;" data-cate="{{ category | first }}">{{ category | first }}
-        <span class="badge">{{ category | last | size }}</span></a>
-    {% endfor %}
-    </div>
-    
-    {% include links.html %}
+  <div class="col-sm-3">    
+    {% include sidebar.html %}
   </div>
 </div>

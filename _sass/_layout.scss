@@ -246,6 +246,43 @@
 }
 
 /**
+ * Labels
+ */
+.labels-list {
+    display: block;
+    list-style-type: disc;
+    list-style: none;
+    overflow: hidden;
+    margin-left: 0px;
+    
+    li {
+        float: left;
+        position: relative;
+        line-height: 33px;
+    }
+    
+    .count {
+        color: #666;
+        vertical-align: super;
+        font-size: 12px;
+    }
+    
+    a {
+        padding: .35em .5em .25em .5em;
+        margin: 0 0.5em;
+        color: #666;
+        border: 1px solid #e7e7e7;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 15px;
+        &:hover {
+            text-decoration: none;
+            background-color: #e7e7e7;
+        }
+    }
+}
+
+/**
  * Posts
  */
 .post-header {
@@ -265,6 +302,11 @@
 .post-content {
     margin-bottom: $spacing-unit;
 
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: $spacing-unit * 0.7;
+        margin-bottom: $spacing-unit * 0.7;
+    }
+    
     h2 {
         font-size: 32px;
 
@@ -289,6 +331,7 @@
         }
     }
 }
+
 /**
  * 文章目录相关
  */
