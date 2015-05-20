@@ -65,7 +65,7 @@ function categoryDisplay() {
  * 回到顶部
  */
 function backToTop() {
-    //滚页面才显示返回顶部
+    // 滚页面才显示返回顶部
     $(window).scroll(function() {
         if ($(window).scrollTop() > 100) {
             $("#top").fadeIn(500);
@@ -73,14 +73,14 @@ function backToTop() {
             $("#top").fadeOut(500);
         }
     });
-    //点击回到顶部
+    // 点击回到顶部
     $("#top").click(function() {
         $("body").animate({
             scrollTop: "0"
         }, 500);
     });
 
-    //初始化tip
+    // 初始化tip
     $(function() {
         $('[data-toggle="tooltip"]').tooltip();
     });
@@ -92,23 +92,17 @@ function backToTop() {
 function generateContent() {
     if (typeof $('#markdown-toc').html() === 'undefined') {
         $('#content').hide();
-        //$('#myArticle').removeClass('col-sm-8').addClass('col-sm-12');
     } else {
         $('#content').html('<ul class="nav" id="myaffix">' + $('#markdown-toc').html() + '</ul>');
-        //$('#markdown-toc').html('');
         $('body').attr('data-spy', 'scroll');
         $('body').attr('data-target', '#content');
-        //alert($('body').data('spy'));
-        //data-spy="scroll" data-target="#myScrollspy"
-        $('#myaffix').ready(function() {
-            $('#myaffix').affix({
-                offset: {
-                  top: 250,
-                  bottom: function () {
-                    return (this.bottom = $('footer').outerHeight(true) + 100);
-                  }
+        $('#myaffix').affix({
+            offset: {
+                top: 250,
+                bottom: function () {
+                    return (this.bottom = $('footer').outerHeight(true) + 150);
                 }
-            });
+            }
         });
     }
 }
