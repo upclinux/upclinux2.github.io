@@ -1,17 +1,21 @@
 ---
 layout: post
 title:  "欢迎使用 Jekyll!"
-author: Jekyll
+author: vjudge1
 date:   2015-05-18 14:23:38
 categories: Jekyll
 ---
-*以下不仅仅是一篇翻译。*
-
 此博客是个纯静态博客。空间由 [GitHub Pages](https://pages.github.com) 提供，而所有代码均保存在 [GitHub 项目](https://github.com/upclinux/upclinux.github.io)中。
 
 博客代码是完全公开的，可以按照自己意愿来进行修改。如果有什么好的内容想分享给大家，可以 fork & pull，甚至向会长申请成为 Owner。
 
-博客本身暂时使用 [Jekyll](https://github.com/jekyll/jekyll) 来架设。为什么不用 WordPress 呢？因为 GitHub Pages 不支持那些动态语言。
+博客本身使用 [Jekyll](https://github.com/jekyll/jekyll) 来架设。为什么不用 WordPress 呢？因为 GitHub Pages 不支持那些动态语言。
+
+
+
+
+
+*以下不仅仅是一篇翻译。*
 
 *Jekyll 不支持 Windows。由于文件名和文件内容的汉字编码的问题（Windows 默认使用 GB2312 编码，而 Linux/Mac 均使用 UTF-8 编码），请尽量避免在 Windows 下编辑和管理博客。*
 

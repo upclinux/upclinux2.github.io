@@ -3,11 +3,12 @@ title: UPC Linux
 email: upclinux@163.com
 description: 中国石油大学 (华东) Linux 协会
 footnote: > # this means to ignore newlines until "baseurl:"
-  中国石油大学 (华东) Linux 协会<br><br>自豪地采用 Jekyll
+  中国石油大学 (华东) Linux 协会<br>自豪地不用 WordPress
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://upclinux.github.io" # the base hostname & protocol for your site
 permalink: /:year/:month/:day/:title
 paginate: 5
+excerpt_separator: "\n\n\n\n"
 timezone: Asia/Shanghai
 #twitter_username: jekyllrb
 github_username: upclinux

@@ -95,11 +95,15 @@ function generateContent() {
         //$('#myArticle').removeClass('col-sm-8').addClass('col-sm-12');
     } else {
         $('#content').html('<ul class="nav" id="myaffix">' + $('#markdown-toc').html() + '</ul>');
-        $('#markdown-toc').html('');
+        //$('#markdown-toc').html('');
+        $('body').attr('data-spy', 'scroll');
+        $('body').attr('data-target', '#content');
+        //alert($('body').data('spy'));
+        //data-spy="scroll" data-target="#myScrollspy"
         $('#myaffix').ready(function() {
             $('#myaffix').affix({
                 offset: {
-                  top: 10,
+                  top: 250,
                   bottom: function () {
                     return (this.bottom = $('footer').outerHeight(true) + 100);
                   }

@@ -10,10 +10,8 @@ permalink: /categorites/
     <ul class="post-list" data-list-cate="All">
       {% for post in site.posts %}
       <li>
-        <span class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <h3>
-          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h3>
+        <span class="text-muted">{{ post.date | date: "%Y 年 %-m 月 %-d 日" }}</span>
+        <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
       </li>
       {% endfor %}
     </ul>
@@ -24,7 +22,7 @@ permalink: /categorites/
         {% for post in posts %}
           {% if post.url %}
             <li>
-              <span class="text-muted">{{ post.date | date: "%b %-d, %Y" }}</span>
+              <span class="text-muted">{{ post.date | date: "%Y 年 %-m 月 %-d 日" }}</span>
               <h3>
                 <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
               </h3>
