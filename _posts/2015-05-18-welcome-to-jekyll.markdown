@@ -6,13 +6,14 @@ date:   2015-05-18 14:23:38
 categories: 社团工作
 tags: GitHub
 ---
-终于找到了一个既靠谱又方便【码农】使用的博客。
+终于找到了一个免费、靠谱又方便【码农】使用的博客。
 
-此博客是个纯静态博客。空间由 [GitHub Pages](https://pages.github.com) 提供，而所有代码均保存在 [GitHub 项目](https://github.com/upclinux/upclinux.github.io)中。
+感谢 [GitHub Pages](https://pages.github.com)。这个东西就是用来建静态博客的。还要感谢 [Jekyll](https://github.com/jekyll/jekyll)，前者是免费空间，后者是免费建站。
 
-博客代码是完全公开的，可以按照自己意愿来进行修改。如果有什么好的内容想分享给大家，可以 fork & pull，甚至向会长申请成为 Owner。
+为什么不用 WordPress 呢？需要服务器啊，而且，要知道，服务器费用是不可能给报销的。还有一个重要原因，文章本身是支持 Markdown 语法的纯文本文件，感觉写代码写脚本比用那些图形化编辑器舒服多了，毕竟是在 Linux 环境下折腾过的码农。
 
-博客本身使用 [Jekyll](https://github.com/jekyll/jekyll) 来架设。为什么不用 WordPress 呢？因为 GitHub Pages 不支持那些动态语言。
+博客的[代码](https://github.com/upclinux/upclinux.github.io)是完全公开的。博客的主题是基于 Bootstrap 框架而自行设计的，当然任何人都可以按照自己意愿来进行修改。主题还需要不断完善，`欢迎到 GitHub 项目页面提交 Issue`。
+
 
 
 
