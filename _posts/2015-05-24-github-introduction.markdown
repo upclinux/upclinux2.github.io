@@ -40,7 +40,7 @@ GitHub 是全球最大的社交编程网站。
 
 因为程序猿码农什么的一般都是男的嘛，所以知乎上面又有人黑程序猿了——既然是社交编程，那就是程序猿的社交。程序猿一般都是男的，所以
 
-![同性交友](/static/images/2015-05-24-github-introduction/intro1.png)
+![同性交友](/static/images/2015-05-24-github-introduction/intro1.jpg)
 
 现在说正经的。我们从社交的角度来看看这个网站——
 
@@ -281,4 +281,4 @@ GitHub 没有专门为 Linux 出客户端。不过 GitHub 也是 Git，对吧？
 
 最后发个小图，
 
-![社交](/static/images/2015-05-24-github-introduction/intro6.png)
+![社交](/static/images/2015-05-24-github-introduction/intro6.jpg)
