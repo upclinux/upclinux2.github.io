@@ -61,6 +61,9 @@ GitHub 是全球最大的社交编程网站。
 ### GitHub 的一些特色
 
 1. 发展迅速：过去流行 SourceForge (此网站偶尔会被墙) 和 Google Code (一直被墙)。不过 GitHub 分支代码什么的太方便了，而且，现在是 GitHub 火了。
+   
+   最近 SourceForge 开始耍流氓，所以肯定有一大帮用户要走了。
+   
 2. 社交化编程：这也是个社交网站，不解释。
 3. 版本控制 & 易于协作
 4. 易于分支和贡献
@@ -174,8 +177,8 @@ Windows 下可以用 MarkdownPad (需要花钱) 或 Miu 来编辑，也可以用
 
 GitHub 支持一些特殊的符号：
 
-1. emoji：输入 `:`，会弹出一个 emoji 列表。如果你知道某个表情的英文名，那你就可以用了——`:ghost:`。
-2. `:octocat:` 是 GitHub 喵喵。
+1. emoji：输入 `:`，会弹出一个 emoji 列表。如果你知道某个表情的英文名，那你就可以用了——<code>:ghost<span></span>:</code>:ghost:。
+2. <code>:octocat<span></span>:</code> 是 GitHub 喵喵:octocat:。
 3. 在 GitHub 里你可以直接 `@` 某人。当然，别滥用 @，免得被别人拉黑。
 4. 在 Issues 里可以用 `#` 引用已经发过的帖子，如 `#12`。
 
