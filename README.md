@@ -64,13 +64,14 @@ Jekyll 采用 Liquid 模板语言，这门语言虽然不像那些动态语言�
 
 ## 如何在本地预览博客
 
-### 第一次配置
-
 **强烈建议不要在 Windows 系统中操作。Jekyll 官方不支持 Windows。**
 
-Windows 里的配置太麻烦了，而且还容易出问题（汉字本身就麻烦）。所以说这种麻烦事儿还得找度娘。
 
-以下步骤同时适用 Linux 和 OS X：
+OS X 的配置是最轻松的。但是对于 Ubuntu 等 Linux 系统，我们要稍稍做点事儿：
+	
+	sudo apt-get install ruby-dev nodejs
+
+接下来的步骤同时适用于 Linux 和 OS X：
 
 1. 先逛一下[淘宝 (ruby.taobao.org)](http://ruby.taobao.org)。大家都知道方校长做了什么，所以淘宝为我们提供了 RubyGems 镜像。按照页面上的说明换源。
 2. 照敲：
