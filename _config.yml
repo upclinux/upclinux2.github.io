@@ -5,7 +5,7 @@ description: 中国石油大学 (华东) Linux 协会
 footnote: > # this means to ignore newlines until "baseurl:"
   &copy; 2015 中国石油大学 (华东) Linux 协会<br>自豪地采用 GitHub Pages 和 Jekyll
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://upclinux.github.io" # the base hostname & protocol for your site
+url: "https://upclinux.github.io" # the base hostname & protocol for your site
 permalink: /:year/:month/:day/:title
 paginate: 5
 excerpt_separator: "\n\n\n\n"

@@ -16,10 +16,10 @@ layout: default
         <div class="post-header">
           <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
           <p class="post-meta">
-            {{ post.date | date: "%Y 年 %-m 月 %-d 日" }}
+            <span class="glyphicon glyphicon-calendar"></span> {{ post.date | date: "%Y 年 %-m 月 %-d 日" }}
             {% if post.author %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span> {{ post.author }}{% endif %}
             {% if post.meta %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-bookmark"></span> {{ post.meta }}{% endif %}
-            {% if post.categories %}
+            {% if post.categories[0] %}
               &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-th-list"></span>
               {% for c in post.categories %}
                 <a href="{{ "/categorites/?c=" | prepend: site.baseurl | append: c }}">{{ c }}</a>
@@ -39,22 +39,75 @@ layout: default
       {% endfor %}
     </div>
 
-    <nav>
-      <ul class="pager">
+    <nav class="text-center">
+      <ul class="pagination">
+        {% assign show_first = paginator.page | minus: 2 %}
+        {% assign show_last = paginator.page | plus: 2 %}
+        {% assign right = paginator.total_pages | minus: 1 %}
+        {% assign right2 = paginator.total_pages | minus: 2 %}
+        {% if show_first < 2 %}{% assign show_first = 2 %}{% endif %}
+        {% if show_last >= paginator.total_pages %}{% assign show_last = paginator.total_pages | minus: 1 %}{% endif %}
+
         {% if paginator.previous_page %}
-        <li class="previous">
-          <a href="{{ paginator.previous_page_path }}" title="previous page">
-            <span aria-hidden="true">&larr;</span> 
-            <small>更新的文章</small>
+        <li>
+          <a href="{{ paginator.previous_page_path }}" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <small>上一页</small>
+          </a>
+        </li>    
+        {% else %}
+        <li class="disabled">
+          <a href="javascript:;">
+            <span aria-hidden="true">&laquo;</span>
+            <small>上一页</small>
           </a>
         </li>
         {% endif %}
+              
+        {% if paginator.page == 1 %}
+        <li class="active"><a href="javascript:;">1</a></li>
+        {% else %}
+        <li><a href="{{ '/index.html' | prepend: site.baseurl }}">1</a></li>
+        {% endif %}
 
+        {% if show_first > 3 %}
+          <li class="disabled"><a href="javascript:;">...</a></li>
+        {% elsif show_first == 3 %}
+          <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: ':num', 2 }}">2</a></li>
+        {% endif %}
+        
+        {% for i in (show_first..show_last) %}
+          {% if paginator.page == i %}
+            <li class="active"><a href="javascript:;">{{ i }}</a></li>
+          {% else %}
+            <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: ':num', i }}">{{ i }}</a></li>
+          {% endif %}
+        {% endfor %}
+
+        {% if show_last < right2 %}
+          <li class="disabled"><a href="javascript:;">...</a></li>
+        {% elsif show_last == right2 %}
+          <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: ':num', right }}">{{ right }}</a></li>
+        {% endif %}
+
+        {% if paginator.page == paginator.total_pages %}
+        <li class="active"><a href="javascript:;">{{ paginator.total_pages }}</a></li>
+        {% else %}
+        <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: ':num', paginator.total_pages }}">{{ paginator.total_pages }}</a></li>
+        {% endif %}
+        
         {% if paginator.next_page %}
-        <li class="next">
-          <a href="{{ paginator.next_page_path }}">
-            <small>更早的文章</small> 
-            <span aria-hidden="true">&rarr;</span>
+        <li>
+          <a href="{{ paginator.next_page_path }}" aria-label="Next">
+            <small>下一页</small>
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+        {% else %}
+        <li class="disabled">
+          <a href="javascript:;" aria-label="Next">
+            <small>下一页</small>
+            <span aria-hidden="true">&raquo;</span>
           </a>
         </li>
         {% endif %}

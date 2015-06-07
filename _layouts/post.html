@@ -6,10 +6,10 @@ layout: default
     <header class="page-header">
       <h1 class="post-title">{{ page.title }}</h1>
       <p class="post-meta">
-        {{ page.date | date: "%Y 年 %-m 月 %-d 日" }}
+        <span class="glyphicon glyphicon-calendar"></span> {{ page.date | date: "%Y 年 %-m 月 %-d 日" }}
         {% if page.author %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span> {{ page.author }}{% endif %}
         {% if page.meta %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-bookmark"></span> {{ page.meta }}{% endif %}
-        {% if page.categories %}
+        {% if page.categories[0] %}
           &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-th-list"></span>
           {% for c in page.categories %}
             <a href="{{ "/categorites/?c=" | prepend: site.baseurl | append: c }}">{{ c }}</a>
