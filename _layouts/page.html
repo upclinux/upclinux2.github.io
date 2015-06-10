@@ -1,19 +1,19 @@
 ---
 layout: default
 ---
-<div class="row">
-  <div class="col-md-9">
-    <header class="page-header">
-      <h1 class="post-title">{{ page.title }}</h1>
-    </header>
+<div class="jumbotron">
+  <div class="container">
+    <h1 id="post-title">{{ page.title }}</h1>
+    <p><a href="{{ site.baseurl }}/">返回主页</a></p> 
   </div>
-
-  <div class="col-md-9">
-    <article class="post-content">
-      {{ content }}
-    </article>
-  </div>
-  
-  <br class="clear">
 </div>
-
+<div id="main" class="container main">
+  <div class="row">
+    <div class="col-md-9">
+      <article class="post-content">
+        {{ content }}
+      </article>
+    </div>
+    <br class="clear">
+  </div>
+</div>

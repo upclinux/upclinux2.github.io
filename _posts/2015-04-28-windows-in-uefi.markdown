@@ -111,19 +111,19 @@ Secure Boot 是 UEFI 支持的一个功能。如果该功能开启，在引导�
 
 一般情况，人们习惯上把一个 MBR 磁盘划分为一个 `主分区` (C: 或者叫 /dev/sda1) 和一个 `扩展分区` (/dev/sda2) 。其他分区都是被包在扩展分区之内的 (从 /dev/sda5 开始) 。
 
-![mbr](/static/images/mbr.png)
+![mbr](/images/mbr.png)
 
 ### GPT 磁盘的外观
 
 GPT 磁盘的分区全部是主分区。一般 GPT 磁盘前面有一个数百 MB 的采用 FAT32 文件系统的分区，即 ESP 分区。
 
-![gpt1](/static/images/gpt1.png)
+![gpt1](/images/gpt1.png)
 
 ### 品牌机的 GPT 磁盘
 
 一些品牌机有恢复功能，因此会多数一些分区来保存“恢复程序”和/或原始系统镜像。并且这些分区在一般情况下是不能被直接分配盘符的。
 
-![gpt2](/static/images/gpt2.png)
+![gpt2](/images/gpt2.png)
 
 ## Windows 对两种模式的支持
 

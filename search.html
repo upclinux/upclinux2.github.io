@@ -3,16 +3,23 @@ layout: default
 comments: false
 permalink: /search/
 ---
-<div class="row">
-  <div class="col-md-9" role="main">    
-    <h1 class="page-header">搜索</h1>
-    <ul class="post-list" id="searchlist">
-    </ul>    
-  </div>
-  
-  <div class="col-sm-3">    
-    {% include sidebar.html %}
+<div class="jumbotron">
+  <div class="container">
+    <h1>搜索</h1>
+    <p>“<span id="keywordlabel"></span>”的搜索结果</p> 
   </div>
 </div>
-
-<script src="{{ "/static/js/search.js" | prepend: site.baseurl }}"></script>
+<div id="main" class="container main">
+  <div class="row">
+    <div class="col-md-9" role="main">    
+      <ul class="post-list" id="searchlist">
+      </ul>    
+    </div>
+    
+    <div class="col-sm-3">    
+      {% include sidebar.html %}
+    </div>
+  </div>
+  
+  <script src="{{ "/static/js/search.js" | prepend: site.baseurl }}"></script>
+</div>

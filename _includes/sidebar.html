@@ -1,5 +1,15 @@
-<h4 class="page-header">
-  分类
+<h4 class="page-header text-muted">
+  <i class="fa fa-search"></i> 搜索
+</h4>
+
+<form method="get" action="{{ "/search/" | prepend: site.baseurl }}">
+  <div class="form-group">
+    <input type="text" placeholder="正则表达式" class="form-control" name="s" id="keyword">
+  </div>
+</form>
+
+<h4 class="page-header text-muted">
+  <i class="fa fa-th-list"></i> 分类
 </h4>
 
 <div class="categories-list">
@@ -8,7 +18,7 @@
   {% else %}
     {% assign u = "javascript:;" %}
   {% endif %}
-  <a class="categories-list-item" href="{{ u }}" data-cate="All">
+  <a class="item" href="{{ u }}" data-cate="All">
     全部文章
     <span class="badge">{{ site.posts | size }}</span>
   </a>
@@ -19,15 +29,15 @@
     {% else %}
       {% assign u = "javascript:;" %}
     {% endif %}
-    <a class="categories-list-item" href="{{ u }}" data-cate="{{ category | first }}">
+    <a class="item" href="{{ u }}" data-cate="{{ category | first }}">
       {{ category | first }}
       <span class="badge">{{ category | last | size }}</span>
     </a>
   {% endfor %}
 </div>
 
-<h4 class="page-header">
-  标签云
+<h4 class="page-header text-muted">
+  <i class="fa fa-tags"></i> 标签云
 </h4>
 
 {% assign first = site.tags.first %}
@@ -67,17 +77,15 @@
   {% else %}
     {% assign u = "#tag-" | append: tag[0] %}
   {% endif %}
-  <a href="{{ u }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};">{{ tag[0] }}</a>
+  <a href="{{ u }}" style="font-size: {{ size }}pt; color: #{{ color }}{{ color }}{{ color }};"
+    data-toggle="tooltip" data-placement="top" title="{{ tag[1].size }} 篇文章">{{ tag[0] }}</a>&nbsp;
 {% endfor %}
 
-<h4 class="page-header">
-  链接
+<h4 class="page-header text-muted">
+  <i class="fa fa-external-link"></i> 链接
 </h4>
-<small>
-<p><a href="{{ "/feed.xml" | prepend: site.baseurl }}">订阅本博客</a></p>
-<p><a href="https://github.com/upclinux/upclinux.github.io">博客源代码</a></p>
-<p><a href="/intro/">入门指引</a></p>
-<p><a href="http://vjudge1.github.io">某会长的博客</a></p>
-<p><a href="http://jerry.weighingproduct.com">JerryZone</a></p>
-<p><a href="http://sfa.since2014.cn">科幻协会</a></p>
-</small>
+<ul class="link-list fa-ul">
+{% for link in site.external_links %}
+  <li><i class="fa-li fa fa-link"></i><a href="{{ link.url }}" data-toggle="tooltip" data-placement="bottom" title="{{ link.url }}">{{ link.name }}</a></li>
+{% endfor %}
+</ul>

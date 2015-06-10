@@ -17,8 +17,22 @@ qqqun_idkey: e47c6b546d3373c09f7eaa8d4173728a513975ed2d0ec20106e83cfb11a3bf08
 #weibo_username: upclinux
 #weibo_userid: 0000
 
+host: 0.0.0.0
+
 # Build settings
 markdown: kramdown
 
 gems:
 - jemoji
+
+# External links
+external_links:
+- 
+  name: 入门指引
+  url: http://upclinux.github.io/intro/
+-
+  name: 某会长的博客
+  url: https://vjudge1.github.io
+-
+  name: 课戴表王晨宇
+  url: http://wangchenyu.net.cn

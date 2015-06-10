@@ -34,6 +34,9 @@ $(document).ready(function() {
     categoryDisplay();
     generateContent();
     backToTop();
+    fixTables();
+}).bind('DOMNodeInserted', function() {
+    fixLinks();
 });
 
 /**
@@ -43,21 +46,19 @@ $(document).ready(function() {
  * @return {[type]} [description]
  */
 function categoryDisplay() {
-    /*only show All*/
-    $('.post-list[data-list-cate!=All]').hide();
     /*show category when click categories list*/
-    $('.categories-list-item').click(function() {
+    $('.item').click(function() {
         var cate = $(this).data('cate'); //get category's name
 
         $('.post-list[data-list-cate!=' + cate + ']').hide(250);
         $('.post-list[data-list-cate=' + cate + ']').show(400);
         
-        $('#categorization').text(cate!='All'?cate:'全部文章');
+        $('#categorization').text(cate);
     });
     
     var s=$.request.queryString['c'];
     if (s) { 
-        $('.categories-list-item[data-cate='+s+']').click(); 
+        $('.item[data-cate='+s+']').click(); 
     }
 }
 
@@ -80,7 +81,7 @@ function backToTop() {
         }, 500);
     });
 
-    // 初始化tip
+    // 初始化 tip
     $(function() {
         $('[data-toggle="tooltip"]').tooltip();
     });
@@ -95,14 +96,33 @@ function generateContent() {
         $('#content').hide();
     } else {
         $('#content').html('<ul class="nav" id="myaffix">' + $('#markdown-toc').html() + '</ul>');
-        $('body').scrollspy({ target: '#content' });
+        $('body').scrollspy({ target: '#content' })
         $('#myaffix').affix({
             offset: {
                 top: 250,
                 bottom: function () {
-                    return (this.bottom = $('footer').outerHeight(true) + 150);
+                    return (this.bottom = $('footer').outerHeight(true) + $('#disqus_thread').outerHeight(true) + 150);
                 }
             }
         });
     }
+}
+
+/**
+ * 处理文章内表格
+ */
+function fixTables() {
+    $('.post-content table').each(function() {
+        if (!$(this).hasClass('table'))
+            $(this).addClass('table table-striped table-bordered');
+    });
+}
+
+/**
+ * 处理页面链接
+ */
+function fixLinks() {
+    $('a[href^="http"]').each(function() {
+        $(this).attr('target', '_blank');
+    });
 }

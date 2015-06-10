@@ -1,44 +1,53 @@
 ---
 layout: default
 ---
-<div class="row">
-  <div class="col-md-12">
-    <header class="page-header">
-      <h1 class="post-title">{{ page.title }}</h1>
-      <p class="post-meta">
-        <span class="glyphicon glyphicon-calendar"></span> {{ page.date | date: "%Y 年 %-m 月 %-d 日" }}
-        {% if page.author %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span> {{ page.author }}{% endif %}
-        {% if page.meta %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-bookmark"></span> {{ page.meta }}{% endif %}
-        {% if page.categories[0] %}
-          &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-th-list"></span>
-          {% for c in page.categories %}
-            <a href="{{ "/categorites/?c=" | prepend: site.baseurl | append: c }}">{{ c }}</a>
-          {% endfor %}
-        {% endif %}
-        {% if page.tags[0] %}
-          &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-tags"></span>&nbsp;
-          {% for c in page.tags %}
-            <a href="{{ "/tags/#tag-" | prepend: site.baseurl | append: c }}">{{ c }}</a>
-          {% endfor %}
-        {% endif %}
-      </p>
-    </header>
+<div class="jumbotron">
+  <div class="container">
+    <h1 id="post-title">{{ page.title }}</h1>
+    <p>
+      <span class="glyphicon glyphicon-calendar"></span> {{ page.date | date: "%Y 年 %-m 月 %-d 日" }}
+      {% if page.author %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-user"></span> {{ page.author }}{% endif %}
+      {% if page.meta %}&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-bookmark"></span> {{ page.meta }}{% endif %}
+      {% if page.categories %}
+        &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-th-list"></span>
+        {% for c in page.categories %}
+          <a href="{{ "/categorites/?c=" | prepend: site.baseurl | append: c }}">{{ c }}</a>
+        {% endfor %}
+      {% endif %}
+      {% if page.tags[0] %}
+        &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-tags"></span>&nbsp;
+        {% for c in page.tags %}
+          <a href="{{ "/tags/#tag-" | prepend: site.baseurl | append: c }}">{{ c }}</a>
+        {% endfor %}
+      {% endif %}
+    </p> 
   </div>
-  <div class="col-md-8" role="main">
-    <article class="post-content">
-      {{ content }}
-    </article>
-  
-    <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到 QQ 空间"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
-    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","qzone","tsina","bdysc","weixin","renren","tqq","bdxc","kaixin001","tqf","tieba","douban","tsohu","bdhome","sqq","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","fbook","twi","linkedin","copy","print"],"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-    
-    <br class="clear">
+</div>
+<div id="main" class="container main"> 
+  <div class="row">
+    <div class="col-md-8" role="main">
+      <article class="post-content">
+        {{ content }}
+      </article>
+      <div class="text-right">
+        <ul class="sharelist">
+          <li><a href="#" class="share" data-target="weibo" data-toggle="tooltip" title="分享到微博"><i class="fa fa-weibo"></i></a></li>
+          <li><a href="#" class="share" data-target="linkedin" data-toggle="tooltip" title="分享到 LinkedIn"><i class="fa fa-linkedin-square"></i></a></li>
+          <li><a href="#" class="share" data-target="facebook" data-toggle="tooltip" title="分享到 Facebook"><i class="fa fa-facebook-square"></i></a></li>
+          <li><a href="#" class="share" data-target="twitter" data-toggle="tooltip" title="分享到 Twitter"><i class="fa fa-twitter-square"></i></a></li>
+          <li><span class="text-muted">分享本文:</span></li>
+        </ul>
+        <script src="{{ "/static/js/share.js" | prepend:site.baseurl }}"></script>
+      </div>
       
-    <p class="text-muted"><small>由于某些非技术原因，博客暂不开放评论功能。</small></p>
-    
-    <br class="clear">
+      <br class="clear">
+        
+      <!--<p class="text-muted"><small>由于某些非技术原因，博客暂不开放评论功能。</small></p>
+      
+      <br class="clear">-->
+    </div>
+    <div id="content" class="col-sm-4 hidden-xs hidden-sm"></div>
   </div>
-  <div id="content" class="col-sm-3 hidden-xs hidden-sm"></div>
 </div>
 
     

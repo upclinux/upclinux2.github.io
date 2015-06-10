@@ -6,9 +6,8 @@ var entries = null;
 var keyword = $.request.queryString['s'];
 
 $('#keyword').val(keyword);
-document.title = "Search";
-
-$('#searchlist').hide();
+$('#keyword2').val(keyword);
+$('#keywordlabel').text(keyword);
 
 function htmlEscape(s) {
 	return String(s).replace(/[&<>"'\/]/g, function(s) {
@@ -26,8 +25,7 @@ function htmlEscape(s) {
 
 function formatDate(date) {
 	var matches = date.match(/(\d{1,2}) ([A-Za-z]{3}) (\d{4})/);
-	var monthMap = {'Jan':1,'Feb':2,'Mar':3,'Apr':4,'May':5,'Jun':6,'Jul':7,'Aug':8,'Sep':9,'Oct':10,'Nov':11,'Dec':12};
-	return matches[3] + ' 年 ' + monthMap[matches[2]] + ' 月 ' + matches[1] + ' 日';
+	return matches[2] + ' ' + matches[1] + ', ' + matches[3];
 } 
 
 function findEntries(q) {

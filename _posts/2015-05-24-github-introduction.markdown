@@ -11,7 +11,7 @@ tags: GitHub 讲座
 
 作为互联网时代的 Coder，如果还不知道 GitHub 是个什么东西，那就 OUT 了！
 
-![octocat](/static/images/2015-05-24-github-introduction/octocat.png)
+![octocat](/images/2015-05-24-github-introduction/octocat.png)
 
 
 
@@ -40,23 +40,23 @@ GitHub 是全球最大的社交编程网站。
 
 因为程序猿码农什么的一般都是男的嘛，所以知乎上面又有人黑程序猿了——既然是社交编程，那就是程序猿的社交。程序猿一般都是男的，所以
 
-![同性交友](/static/images/2015-05-24-github-introduction/intro1.jpg)
+![同性交友](/images/2015-05-24-github-introduction/intro1.jpg)
 
 现在说正经的。我们从社交的角度来看看这个网站——
 
-![Linus](/static/images/2015-05-24-github-introduction/intro2.png)
+![Linus](/images/2015-05-24-github-introduction/intro2.png)
 
 可以分享代码——其实是可以共同参与的，后面讲怎么操作。认识我的应该都知道我是个点赞狂魔，但是在 GitHub 里我不随便赞，因为有“我赞过的”这个东西而且它还不分页！
 
-![分享代码](/static/images/2015-05-24-github-introduction/intro3.png)
+![分享代码](/images/2015-05-24-github-introduction/intro3.png)
 
 可以评论——当然可以发帖和跟帖，而且不怕查水表 (但是，不要发和程序无关的东西)。这张图看不出来，实际上你甚至可以对某一行代码进行评论！
 
-![评论](/static/images/2015-05-24-github-introduction/intro4.png)
+![评论](/images/2015-05-24-github-introduction/intro4.png)
 
 下图是我改了别人的代码，然后向作者发了合并请求，结果作者同意合并 (Merged) 了。
 
-![Pull Request](/static/images/2015-05-24-github-introduction/intro5.png)
+![Pull Request](/images/2015-05-24-github-introduction/intro5.png)
 
 ### GitHub 的一些特色
 
@@ -123,7 +123,7 @@ GitHub 装完会在桌面上出现个快捷方式。然后就能用了。
    
    在你修改代码之后，客户端会自动检测变化，然后出现`Uncommitted Changes` (等待确认的更改)。右侧是个文件列表，反映了你在这一阶段的改动 (绿色表示添加，红色表示删除)。在`Summary`和`Description`里填些易于理解的、反映你的修改的内容，然后单击`Commit to master` (确认更改)。这一阶段的改动就被保存了。
    
-   ![client](/static/images/2015-05-24-github-introduction/client.png)
+   ![client](/images/2015-05-24-github-introduction/client.png)
    
    如果感觉改动不合适，可以`Undo`撤销更改，重新编辑代码，然后重新`Commit`。
    
@@ -151,7 +151,7 @@ Issues 不用解释了吧。你可以提交程序的 bug，也可以提意见和
 4. 该怎么 Commit & Sync 就怎么弄。但是 Sync 之后发生变化的是你自己手里的副本，不是人家作者的代码。
 5. 希望提交给原作者了？进到你这个副本的主页，点击`Pull Request`、`Create Pull Request`，并在评论中写清你做了什么事儿。
 
-   ![PullRequest](/static/images/2015-05-24-github-introduction/pullrequest.png)
+   ![PullRequest](/images/2015-05-24-github-introduction/pullrequest.png)
    
    GitHub 会判断能否直接合并。如果不能直接合并，那就需要交给作者本人来处理了。
 
@@ -284,4 +284,4 @@ GitHub 没有专门为 Linux 出客户端。不过 GitHub 也是 Git，对吧？
 
 最后发个小图，
 
-![社交](/static/images/2015-05-24-github-introduction/intro6.jpg)
+![社交](/images/2015-05-24-github-introduction/intro6.jpg)
