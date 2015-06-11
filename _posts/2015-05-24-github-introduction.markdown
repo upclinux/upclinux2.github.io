@@ -228,7 +228,7 @@ GitHub 没有专门为 Linux 出客户端。不过 GitHub 也是 Git，对吧？
 
 ### Visual Studio Code
 
-给大家推荐个编辑器，[Visual Studio Code](http://code.visualstudio.com)。虽然和 Windows 10 一样还是技术预览版，不过也比较好用——至少不用为了 Git 而敲命令了。
+给大家推荐个编辑器，[Visual Studio Code](https://code.visualstudio.com)。虽然和 Windows 10 一样还是技术预览版，不过也比较好用——至少不用为了 Git 而敲命令了。
 
 默认情况下，Visual Studio Code 不能正常显示汉字 (Windows 和 Mac 里都正常)——中国字是方块字，结果中国字真变成“方块字”了。
 

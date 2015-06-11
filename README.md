@@ -1,5 +1,5 @@
 # upclinux.github.io
-协会博客 [upclinux.github.io](http://upclinux.github.io)
+协会博客 [upclinux.github.io](https://upclinux.github.io)
 
 采用 GitHub Pages 和 Jekyll 架设。Jekyll 是 GitHub 官方认可和采用的静态博客软件。
 

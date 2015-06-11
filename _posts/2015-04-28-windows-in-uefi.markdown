@@ -32,9 +32,9 @@ tags: Windows UEFI
 
 ## UEFI 和 Legacy
 
-过去的电脑用的是 [BIOS](http://zh.wikipedia.org/wiki/BIOS)。BIOS 名为“基本输入输出系统”。过去的电脑在开机时会首先加载 BIOS 程序，进行开机自检，加载引导程序并引导操作系统。
+过去的电脑用的是 [BIOS](https://zh.wikipedia.org/wiki/BIOS)。BIOS 名为“基本输入输出系统”。过去的电脑在开机时会首先加载 BIOS 程序，进行开机自检，加载引导程序并引导操作系统。
 
-由于 BIOS 年代久远，难以适应计算机硬件的发展 (例如寻址能力只有 16 位) 。而且基于 BIOS 的扩展程序也难以开发，因此诞生了新的规范——EFI。2002 年 EFI 由英特尔开发，2005 年交给 UEFI 论坛发展并更名为 [UEFI](http://zh.wikipedia.org/wiki/%E7%B5%B1%E4%B8%80%E5%8F%AF%E5%BB%B6%E4%BC%B8%E9%9F%8C%E9%AB%94%E4%BB%8B%E9%9D%A2)。
+由于 BIOS 年代久远，难以适应计算机硬件的发展 (例如寻址能力只有 16 位) 。而且基于 BIOS 的扩展程序也难以开发，因此诞生了新的规范——EFI。2002 年 EFI 由英特尔开发，2005 年交给 UEFI 论坛发展并更名为 [UEFI](https://zh.wikipedia.org/wiki/%E7%B5%B1%E4%B8%80%E5%8F%AF%E5%BB%B6%E4%BC%B8%E9%9F%8C%E9%AB%94%E4%BB%8B%E9%9D%A2)。
 
 UEFI 名为“统一可扩展固件接口”。它相当于一个小型操作系统。有些电脑内置 EFI Shell，这样可以在没有任何工具的前提下进行简单的系统维护和修复。
 
