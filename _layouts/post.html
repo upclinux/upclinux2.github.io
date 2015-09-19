@@ -20,10 +20,10 @@ layout: default
           <a href="{{ "/tags/#tag-" | prepend: site.baseurl | append: c }}">{{ c }}</a>
         {% endfor %}
       {% endif %}
-    </p> 
+    </p>
   </div>
 </div>
-<div id="main" class="container main"> 
+<div id="main" class="container main">
   <div class="row">
     <div class="col-md-8" role="main">
       <article class="post-content">
@@ -39,16 +39,30 @@ layout: default
         </ul>
         <script src="{{ "/static/js/share.js" | prepend:site.baseurl }}"></script>
       </div>
-      
+
       <br class="clear">
-        
-      <!--<p class="text-muted"><small>由于某些非技术原因，博客暂不开放评论功能。</small></p>
-      
-      <br class="clear">-->
+
+      <div class="post-area post comment">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+              /* * * CONFIGURATION VARIABLES * * */
+              var disqus_shortname = 'upclinux';
+
+              /* * * DON'T EDIT BELOW THIS LINE * * */
+              (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      </div>
+
+      <br class="clear">
     </div>
     <div id="content" class="col-sm-4 hidden-xs hidden-sm"></div>
   </div>
 </div>
-
-    
-  
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js"></script>
+<script type="text/javascript">anchors.options.placement="left";anchors.add('article h1,h2,h3,h4');</script>
+<script type="text/javascript" src="{{ site.baseurl }}/static/js/callout.js"></script>
