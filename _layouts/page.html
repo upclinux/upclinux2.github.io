@@ -4,16 +4,49 @@ layout: default
 <div class="jumbotron">
   <div class="container">
     <h1 id="post-title">{{ page.title }}</h1>
-    <p><a href="{{ site.baseurl }}/">返回主页</a></p> 
+    <p><a href="{{ site.baseurl }}/">返回主页</a></p>
   </div>
 </div>
 <div id="main" class="container main">
   <div class="row">
-    <div class="col-md-9">
+    <div class="col-md-8" role="main">
       <article class="post-content">
         {{ content }}
       </article>
+      <div class="text-right">
+        <ul class="sharelist">
+          <li><a href="#" class="share" data-target="weibo" data-toggle="tooltip" title="分享到微博"><i class="fa fa-weibo"></i></a></li>
+          <li><a href="#" class="share" data-target="linkedin" data-toggle="tooltip" title="分享到 LinkedIn"><i class="fa fa-linkedin-square"></i></a></li>
+          <li><a href="#" class="share" data-target="facebook" data-toggle="tooltip" title="分享到 Facebook"><i class="fa fa-facebook-square"></i></a></li>
+          <li><a href="#" class="share" data-target="twitter" data-toggle="tooltip" title="分享到 Twitter"><i class="fa fa-twitter-square"></i></a></li>
+          <li><span class="text-muted">分享本文:</span></li>
+        </ul>
+        <script src="{{ "/static/js/share.js" | prepend:site.baseurl }}"></script>
+      </div>
+
+      <br class="clear">
+
+      <div class="post-area post comment">
+          <div id="disqus_thread"></div>
+          <script type="text/javascript">
+              /* * * CONFIGURATION VARIABLES * * */
+              var disqus_shortname = 'upclinux';
+
+              /* * * DON'T EDIT BELOW THIS LINE * * */
+              (function() {
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+      </div>
+
+      <br class="clear">
     </div>
-    <br class="clear">
+    <div id="content" class="col-sm-4 hidden-xs hidden-sm"></div>
   </div>
 </div>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/1.1.1/anchor.min.js"></script>
+<script type="text/javascript">anchors.options.placement="left";anchors.add('article h1,h2,h3,h4');</script>
+<script type="text/javascript" src="{{ site.baseurl }}/static/js/callout.js"></script>
