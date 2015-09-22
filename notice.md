@@ -15,7 +15,7 @@ hidden: true
 
 本文主要由会长[李思洋](https://vjudge1.github.io)（QQ 群主）写成，几位群管理员参与修改。
 
-如果想交流，可到 QQ 群中寻找群主，或者发邮件到 [vjudge404@gmail.com](mailto:vjudge404@gmail.com)。（其实有的时候电子邮件效果更好。）
+如果想交流，可到 [QQ 群 (279310694)](http://shang.qq.com/wpa/qunwpa?idkey=e47c6b546d3373c09f7eaa8d4173728a513975ed2d0ec20106e83cfb11a3bf08) 中寻找群主，或者发邮件到 [vjudge404@gmail.com](mailto:vjudge404@gmail.com)。（其实有的时候电子邮件效果更好。）
 [% endcallout %]
 
 [% callout style=danger %]
