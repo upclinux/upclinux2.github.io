@@ -28,9 +28,16 @@ markdown: kramdown
 gems:
 - jemoji
 
+# Notice
+notice: >
+  本周活动预告：Linux show——周天（18号）下午西环307
+notice_title: "公告："
+notice_style: "primary"
+notice_level: 1    # 0: Invisible, 1: Only in index page, 2: All pages
+
 # External links
 external_links:
-- 
+-
   name: 入门指引
   url: https://upclinux.github.io/intro/
 -
