@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "大一不让带电脑的话……"
+author: vjudge1
 categories: 杂谈
 tags: UPC
 ---
@@ -11,7 +12,7 @@ tags: UPC
 
 
 
-<span class="blackout">如果你是五毛党，请自觉不看黑条子里的文字，以免引发误会。</span>
+<span class="blackout">五毛党注意：请自觉不看黑条子里的文字，以免引发误会。</span>
 
 今天我们不讨论这条规定是否合法合规，只讨论一些技术性的对策<span class="blackout">，否则会引出一篇足以查水表的长文。简而言之，无论导员采取了怎样极端和不人道的措施，只要“不出事儿”，导员是不会“下台”的……但是换成你就不一样了</span>。
 
